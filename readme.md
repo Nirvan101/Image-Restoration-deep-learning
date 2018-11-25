@@ -1,5 +1,5 @@
 
-#INTRO
+# INTRO
 
 This is my image-restoration project. The aim is to restore images of old and damaged paintings. This project takes an image in-painting approach to this problem. 
 
@@ -7,16 +7,16 @@ This repository contains multiple models that I constructed to solve this task. 
 
 
 
-#Preprocessing:
+## Preprocessing:
 
 The dataset is very small. The training dataset contains only 20 images. So, I have used data augmentation using the ImageDataGenerator. The images are all resized to (256,384,3) as this is the average image size in the dataset. They are then divided by 255 to normalize them. 
 
 
 
 
-#Models:
+## Models:
 
-#Context Encoder
+### Context Encoder
 
 I constructed my model based on the paper 'Context Encoders: Feature Learning by Inpainting'  found here https://arxiv.org/pdf/1604.07379.pdf
 
@@ -28,13 +28,13 @@ The output is then multiplied by 255 to get the final reconstructed output image
 
 ----------------------------------------------------------------------------------------------------
  
-#Context Encoder 2
+### Context Encoder 2
 
 This was my second design for the context encoder. Here I have used a Dense layer to generate the encoding from the encoder. The intuition is that the Dense layer will connect features from different regions of the image together and this will improve the inpainting performance.
 
 -----------------------------------------------------------------------------------------------------
 
-#Conditional GAN
+### Conditional GAN
 
 I designed my conditional GAN based on the paper 'SEMI-SUPERVISED LEARNING WITH CONTEXT-CONDITIONAL GENERATIVE ADVERSARIAL NETWORK' found here https://arxiv.org/pdf/1611.06430v1.pdf
 
@@ -42,14 +42,14 @@ The generator receives an image which has it's central region masked out. The ge
 
 -----------------------------------------------------------------------------------------------------
 
-#GAN
+### GAN
 
 This is a regular GAN where the generator has an mse loss function and the discriminator has a binary_cross_entropy loss function. The generator is designed to generate the entire input image back from the encoding. 
 
 -----------------------------------------------------------------------------------------------------
 
 
-#Pixel diff
+### Pixel diff
 
 This was a script I wrote using the opencv inpainting function. The user has to manually select a rectangular portion of the image and the script will automatically perform inpainting in that region.
 
