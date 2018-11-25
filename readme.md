@@ -1,5 +1,5 @@
 
-# INTRO
+# Image restoration by in-painting
 
 This is my image-restoration project. The aim is to restore images of old and damaged paintings. This project takes an image in-painting approach to this problem. 
 
