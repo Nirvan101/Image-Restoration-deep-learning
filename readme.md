@@ -9,11 +9,11 @@ This repository contains multiple models that I constructed to solve this task. 
 
 There are 68 images in the dataset provided. Out of these only 20 are of good quality. Hence, there are only 20 training images. Example of a good image:
 
-![Training image](https://drive.google.com/open?id=1amYjXfVuwzYwTEStBai3L0t6NOSbi90K)
+[Training image](https://drive.google.com/open?id=1amYjXfVuwzYwTEStBai3L0t6NOSbi90K)
 
 Example of a damaged image: 
 
-![Test image](https://doc-14-8c-docs.googleusercontent.com/docs/securesc/5j15a90ban8ntvvgptfpmdg2b4ol3uat/pkel1tf057294q7caoeffdghk44kqr05/1546372800000/05158308479831370756/05158308479831370756/1POYPF4sYKwgPZHaK4xWz-ppEyiybFts_?e=view&nonce=5npqpfiualrp4&user=05158308479831370756&hash=eeq0o4ajlkuaq6s4nifm24k5hsch93sp)
+[Test image](https://doc-14-8c-docs.googleusercontent.com/docs/securesc/5j15a90ban8ntvvgptfpmdg2b4ol3uat/pkel1tf057294q7caoeffdghk44kqr05/1546372800000/05158308479831370756/05158308479831370756/1POYPF4sYKwgPZHaK4xWz-ppEyiybFts_?e=view&nonce=5npqpfiualrp4&user=05158308479831370756&hash=eeq0o4ajlkuaq6s4nifm24k5hsch93sp)
 
 As you can see, the damaged painting has many discolored patches which have become white. The aim is to use image in-painting to fill these white patches.
 
