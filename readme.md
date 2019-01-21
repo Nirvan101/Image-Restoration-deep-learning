@@ -9,11 +9,11 @@ This repository contains multiple models that I constructed to solve this task. 
 
 There are 68 images in the dataset provided. Out of these only 20 are of good quality. Hence, there are only 20 training images. Example of a good image:
 
-[Training image](https://drive.google.com/open?id=1amYjXfVuwzYwTEStBai3L0t6NOSbi90K)
+![](https://user-images.githubusercontent.com/23417993/51500611-a8a32280-1df4-11e9-833a-840960aa4b49.jpg)
 
 Example of a damaged image: 
 
-[Test image](https://drive.google.com/file/d/1POYPF4sYKwgPZHaK4xWz-ppEyiybFts_/view)
+![](https://user-images.githubusercontent.com/23417993/51500628-b658a800-1df4-11e9-94d3-b62f07567712.jpg)
 
 As you can see, the damaged painting has many discolored patches which have become white. The aim is to use image in-painting to fill these white patches.
 
@@ -38,6 +38,11 @@ The original image is used as the ground truth label. I use a mean-square loss f
 
 The output is then multiplied by 255 to get the final reconstructed output image.
 
+#### Results of autoencoder with reconstruction loss only:
+
+![](https://user-images.githubusercontent.com/23417993/51500741-354de080-1df5-11e9-8a17-965c165b4dad.jpg)
+![](https://user-images.githubusercontent.com/23417993/51500746-3979fe00-1df5-11e9-8bf2-ca586f4ecf83.jpg)
+![](https://user-images.githubusercontent.com/23417993/51500748-3b43c180-1df5-11e9-99c4-9bf70d118134.jpg)
 ----------------------------------------------------------------------------------------------------
  
 ### Context Encoder 2
@@ -57,6 +62,15 @@ The generator has an encoder-decoder network and it produces an image resembling
 This image is passed to the discriminator. It predicts whether the image is original or generator-produced and this loss is called adversial loss. The use of adversial loss improves the training of the generator.
 
 The difference between a regular GAN and a conditional GAN is the use of the custom layer after the generator. This trains the model to produce only the central masked region of the image (and not the entire image as was the case with GAN) using the surrounding regions.
+
+#### Results of cGAN 
+
+The central portion was cropped out from the input image. The model reconstructed it to match the rest of the image.
+
+![](https://user-images.githubusercontent.com/23417993/51500750-3ed74880-1df5-11e9-9013-d5b8187dbb2a.jpeg)
+![](https://user-images.githubusercontent.com/23417993/51500755-426acf80-1df5-11e9-8b02-3ff7afdad287.jpeg)
+![](https://user-images.githubusercontent.com/23417993/51500758-472f8380-1df5-11e9-8ddf-4ef26b55c305.jpeg)
+![](https://user-images.githubusercontent.com/23417993/51500763-4ac30a80-1df5-11e9-9943-c576b7a34122.jpeg)
 
 -----------------------------------------------------------------------------------------------------
 
